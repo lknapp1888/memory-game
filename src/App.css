@@ -1,0 +1,26 @@
+
+h1 {
+  margin: 0;
+}
+
+header {
+  background-color:antiquewhite;
+  display: flex;
+  justify-content: space-around;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  padding: 10px;
+}
+
+.card {
+  height: 100px;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: black solid 1px;
+}
