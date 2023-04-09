@@ -7,6 +7,7 @@ header {
   background-color:antiquewhite;
   display: flex;
   justify-content: space-around;
+  align-items: center;
 }
 
 main {
@@ -23,4 +24,8 @@ main {
   justify-content: center;
   align-items: center;
   border: black solid 1px;
+}
+
+.card:hover {
+  background-color: greenyellow;
 }
