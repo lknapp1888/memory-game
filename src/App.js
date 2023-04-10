@@ -1,8 +1,8 @@
 import "./App.css";
 import Cards from "./components/Cards";
 import { useState } from "react";
-import Generator from "./components/Generator";
 import uniqid from "uniqid";
+import Reset from "./components/Reset";
 
 function App() {
   const [words, setWords] = useState([]);
@@ -26,8 +26,8 @@ function App() {
       if (wordsCopy[i].word === word) {
         //check if it has previously been selected
         if (wordsCopy[i].selected === true) {
-          setGameActive(false)
-          setGameStage('gameover')
+          setGameActive(false);
+          setGameStage("gameover");
           return;
         }
         setScore(score + 1);
@@ -35,9 +35,9 @@ function App() {
           setBestScore(score + 1);
         }
         if (score + 1 === words.length) {
-          setGameActive(false)
-          setGameStage('victory')
-          return
+          setGameActive(false);
+          setGameStage("victory");
+          return;
         }
         wordsCopy[i].selected = true;
         setWords(wordsCopy);
@@ -50,12 +50,10 @@ function App() {
     <div className="App">
       <header>
         <h1>Memory Game</h1>
-        <Generator
-          updateWords={updateWords}
-          gameActive={gameActive}
-          setGameActive={setGameActive}
-          setScore={setScore}
-        ></Generator>
+        <Reset
+        setGameActive={setGameActive}
+        setGameStage={setGameStage}
+        ></Reset>
         <div className="scoreCont">
           <p>Score: {score}</p>
           <p>Best score: {bestScore}</p>
@@ -69,6 +67,10 @@ function App() {
           gameStage={gameStage}
           setGameStage={setGameStage}
           score={score}
+
+          updateWords={updateWords}
+          setGameActive={setGameActive}
+          setScore={setScore}
         ></Cards>
       </main>
     </div>
