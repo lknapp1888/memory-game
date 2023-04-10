@@ -22,7 +22,7 @@ const Generator = function (props) {
 
   if (!props.gameActive) {
     return (
-      <div>
+      <div className="wordInputContainer">
         <input
           type="number"
           min={1}

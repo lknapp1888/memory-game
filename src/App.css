@@ -1,20 +1,40 @@
+* {
+  /* --backgroundColor: #ffffff;
+  --secondaryColor: #082f49;
+  --positiveBtnColor: #15803d;
+  --negativeBtnColor: #b91c1c; */
+  font-family: MyFont;
+}
+
+@font-face {
+  font-family: "MyFont";
+  src: url("Inter-Regular.ttf") format("openType");
+  font-style: normal;
+}
+
 
 h1 {
   margin: 0;
+  width: min-content;
 }
 
 header {
-  background-color:antiquewhite;
+  background-color:#374a76;
+  color: white;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  position: fixed;
+  width: 100%;
 }
 
 main {
   display: flex;
   flex-wrap: wrap;
-  gap: 5px;
+  justify-content: center;
+  gap: 10px;
   padding: 10px;
+  padding-top: 100px
 }
 
 .card {
@@ -23,9 +43,90 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: black solid 1px;
+  border: #374a76 solid 1px;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 
 .card:hover {
-  background-color: greenyellow;
+  background-color: #27ae60;
+}
+
+.messageContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.messageContainer div {
+  width: clamp(300px, 75%, 1000px);
+  /* background-color: grey; */
+}
+
+.wordInputContainer {
+  display: flex;
+  gap: 10px;
+}
+
+
+
+/* CSS */
+button {
+  appearance: none;
+  backface-visibility: hidden;
+  background-color: #27ae60;
+  border-radius: 8px;
+  border-style: none;
+  box-shadow: rgba(39, 174, 96, .15) 0 4px 9px;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Inter,-apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: normal;
+  line-height: 1.5;
+  outline: none;
+  overflow: hidden;
+  padding: 8px 15px;
+  position: relative;
+  text-align: center;
+  transform: translate3d(0, 0, 0);
+  transition: all .3s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: top;
+  white-space: nowrap;
+}
+
+button:hover {
+  background-color: #1e8449;
+  opacity: 1;
+  transform: translateY(0);
+  transition-duration: .35s;
+}
+
+button:hover {
+  box-shadow: rgba(39, 174, 96, .2) 0 6px 12px;
+}
+
+@media (max-width: 600px) {
+  button {
+    width: min-content;
+    padding: 6px 10px;
+  }
+
+  main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .messageContainer {
+    grid-column: span 3;
+  }
+
+  .card {
+    width: auto;
+  }
 }

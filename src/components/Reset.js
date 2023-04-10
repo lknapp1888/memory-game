@@ -11,7 +11,7 @@ const Reset = function (props) {
   
 
       return (
-        <div>
+        <div className="resetBtnCont">
           <button onClick={playAgain}>Start new game</button>
         </div>
       );
