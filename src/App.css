@@ -38,14 +38,15 @@ main {
 }
 
 .card {
-  height: 100px;
-  width: 100px;
+  height: 200px;
+  width: 200px;
   display: flex;
   justify-content: center;
   align-items: center;
   border: #374a76 solid 1px;
   border-radius: 5px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  font-size: 2rem;
 }
 
 .card:hover {
@@ -128,5 +129,13 @@ button:hover {
 
   .card {
     width: auto;
+    font-size: 1rem;
+    height: 80px;
+  }
+}
+
+@media (max-width: 362px) {
+  main {
+    padding-top: 150px
   }
 }
